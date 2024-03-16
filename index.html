@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Flag is here &#8595;</title>
+    <meta charset="utf-8" />
+    <script async=false defer=false>edit_flag = {};
+        function finish() {
+            let g = eval('0xf5eaf6b1');
+            let h = eval('0x9cba213f');
+            g &= 0x7FFFFFFF;
+            h &= 0x7FFFFFFF;
+            g = g^ 0x1a25a98f;
+            console.log('FLAG' + g.toString(16) + h.toString(16)+'}');
+            Object.keys(edit_flag).forEach((f) => [g, h] = edit_flag[f](g, h));
+            g &= 0x7FFFFFFF;
+            h &= 0x7FFFFFFF;
+            document.querySelector('#one').innerHTML = 'FLAG{' + g.toString(16);
+            document.querySelector('#two').innerHTML = h.toString(16) + '}';
+            document.querySelector('#disclaimer1').style.display = 'none';
+            document.querySelector('#disclaimer2').style.display = 'none';
+            document.querySelector('#disclaimer3').style.display = 'none';
+            if (Object.keys(edit_flag).length == 1497)
+                document.querySelector('#disclaimer1').style.display = 'block';
+            else if (Object.keys(edit_flag).length == 1500)
+                document.querySelector('#disclaimer2').style.display = 'block';
+            else
+                document.querySelector('#disclaimer3').style.display = 'block';
+            console.log('loaded');
+        }
+    </script>
+    <style>
+        * {
+            font-family: monospace
+        }
+
+        body {
+            padding: 50px
+        }
+    </style>
+
+</head>
+
+<body onload="finish()">
+    <h1 style="font-size: 190px">Here is the flag!</h1>
+    
+    <p style="font-size: 119px"><span id="one">flag{... comp</span><span id="two">uting ...}</span></p>
+    <div id="disclaimer1" style="display: none">*Disclaimer: it looks like only the left half of the flag is correct.
+        <br><br>
+        Here are the steps to fix this:
+        <ol>
+            <li>Clear your browser cache</li>
+            <li>Clear your browser extensions</li>
+            <li>Clear your computer cache</li>
+            <li>Clear your dns cache</li>
+            <li>Uninstall your browser</li>
+            <li>Unmount the motherboard and blow in the RAM cartridge</li>
+            <li>Install a browser</li>
+            <li>Go to the website and look at the flag</li>
+        </ol>
+        <br>
+        If these steps do not fix your problem, then maybe try adding or removing various plugins to your firefox, maybe
+        something will work idunno.
+    </div>
+    <div id="disclaimer2" style="display: none">*Disclaimer: it looks like only the right half of the flag is correct.
+        <br><br>
+        Here are the steps to fix this:
+        <ol>
+            <li>Clear your browser cache</li>
+            <li>Clear your browser extensions</li>
+            <li>Clear your computer cache</li>
+            <li>Clear your dns cache</li>
+            <li>Uninstall your browser</li>
+            <li>Unmount the motherboard and blow in the RAM cartridge</li>
+            <li>Install a browser</li>
+            <li>Go to the website and look at the flag</li>
+        </ol>
+        <br>
+        If these steps do not fix your problem, then maybe try adding or removing various plugins to your firefox, maybe
+        something will work idunno.
+    </div>
+    <div id="disclaimer3" style="display: none">*Disclaimer: it looks like the flag is incorrect.
+    </div>
+</body>
+
+</html>
